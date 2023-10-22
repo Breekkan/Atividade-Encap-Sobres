@@ -1,0 +1,51 @@
+#Exercício
+#• Defina uma classe com pelo menos 1 atributo e com os getters/setters no modo pythônico
+#• Solicite ao usuário digitar os valores para criação de um objeto da classe criada
+#• Crie um objeto da classe criada usando os valores digitados pelo usuário
+#• Exiba na tela os valores atributos do objeto criado
+#• Altere os atributos do objeto
+#• Exiba os valores atributos do objeto criado mais uma vez
+
+# Criação da classe:
+class MinhaClasse:
+    def __init__(self):
+        self.atributo1 = None
+        self.atributo2 = None
+
+    # Definindo getters e setters no modo pythônico;
+    @property
+    def get_atributo1(self):
+        return self.atributo1
+
+    @get_atributo1.setter
+    def set_atributo1(self, valor):
+        self.atributo1 = valor
+
+    @property
+    def get_atributo2(self):
+        return self.atributo2
+
+    @get_atributo2.setter
+    def set_atributo2(self, valor):
+        self.atributo2 = valor
+
+# Solicitando ao usuário que digite os valores;
+objeto = MinhaClasse()
+objeto.set_atributo1 = input("Digite o valor para o atributo 1: ")
+objeto.set_atributo2 = input("Digite o valor para o atributo 2: ")
+
+# Exibindo os valores dos atributos do objeto criado;
+print("Valores dos atributos do objeto:")
+print("Atributo 1:", objeto.get_atributo1)
+print("Atributo 2:", objeto.get_atributo2)
+
+# Alterando os atributos do objeto;
+novo_valor = input("Digite um novo valor para o atributo 1: ")
+objeto.set_atributo1 = novo_valor
+novo_valor = input("Digite um novo valor para o atributo 2: ")
+objeto.set_atributo2= novo_valor
+
+# Exibindo os valores dos atributos do objeto novamente.
+print("Valores dos atributos do objeto após a alteração:")
+print("Atributo 1:", objeto.get_atributo1)
+print("Atributo 2:", objeto.get_atributo2)

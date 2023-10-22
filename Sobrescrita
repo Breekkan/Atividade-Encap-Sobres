@@ -1,0 +1,34 @@
+#• Crie um programa em python contendo 3 classes: Integrante_IFRN, Professor, Aluno.
+#• Integrante_IFRN será a superclasse e Professor e Aluno serão sublasses de Integrante_IFRN.
+#• As três classes deverão conter o método exibirMensagem. Cada um dos métodos deverá exibir uma mensagem conforme a seguir:
+#• Integrante_IFRN: “Seja bem vindo(a) ao IFRN!!!”
+#• Professor: “Meus alunos são os melhores!!!”
+#• Aluno: “Vou estudar pra tirar 100 em POO!!!”
+#• Crie o diagrama de classes correspondente a essa questão, incluindo nele atributos e métodos de livre escolha.
+
+# Classe base Integrante_IFRN:
+class Integrante_IFRN:
+    def __init__(self, nome):
+        self.nome = nome
+
+    def exibirMensagem(self):
+        return "Seja bem-vindo(a) ao IFRN!!!"
+
+# Subclasse Professor;
+class Professor(Integrante_IFRN):
+    def exibirMensagem(self):
+        return "Meus alunos são os melhores!!!"
+
+# Subclasse Aluno;
+class Aluno(Integrante_IFRN):
+    def exibirMensagem(self):
+        return "Vou estudar para tirar 100 em POO!!!"
+
+# Exemplo de uso.
+integrante = Integrante_IFRN("Gilbran")
+professor = Professor("Priscilla")
+aluno = Aluno("Diógenes")
+
+print(integrante.nome, "diz:", integrante.exibirMensagem())
+print(professor.nome, "diz:", professor.exibirMensagem())
+print(aluno.nome, "diz:", aluno.exibirMensagem())
